@@ -21,6 +21,7 @@ function App() {
         throw new Error("Something went wrong");
       }
       const data = await response.json();
+      console.log(data);
 
       const loadedMovies = []
 
@@ -56,6 +57,7 @@ function App() {
     );
     const data = await response.json()
     console.log(data);
+    await fetchMoviesHandler()
   };
 
   let content = <p>Found no movies!</p>;
